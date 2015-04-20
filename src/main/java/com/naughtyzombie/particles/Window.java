@@ -71,7 +71,7 @@ public class Window extends JFrame {
                 addParticle();
             }
 
-            public void addParticle() {//play with this method
+            public void aaddParticle() {//play with this method
                 Particle p = new Particle(x, y, 0, 0, 0, 0, c);
                 p.setVel(random(7), random(7));
                 p.setAcc(random(.02), random(.02));
@@ -80,6 +80,32 @@ public class Window extends JFrame {
                 p.setMaxSize(50, 50);
                 p.setGrowth(random(2), random(2));
                 p.setUltSize(true);
+                particles.add(p);
+            }
+
+            public void baddParticle(){//play with this method
+                Particle p = new Particle(x,y,0,0,0,0,c);
+                p.setVel(random(4),random(4));
+                p.setAcc(0,randomPlus(.2)+.1);
+                p.setLife(randomPlus(150)+150);
+                p.setSize(25, 25);
+                p.setMaxSize(25,25);
+                p.setGrowth(-randomPlus(.2)-.5, -randomPlus(.2)-.5);
+                p.setSizeDeault(true);
+                //p.setUltSize(false);
+                particles.add(p);
+            }
+
+            public void addParticle(){//play with this method
+                Particle p = new Particle(x+random(32),y+random(32),0,0,0,0,c);
+                p.setVel(random(1),random(1));
+                p.setAcc(0,-randomPlus(.04)-.02);
+                p.setLife(randomPlus(150)+550);
+                p.setSize(16, 16);
+                p.setMaxSize(25,25);
+                p.setGrowth(-.1, -.1);
+                p.setSizeDeault(true);
+                //p.setUltSize(false);
                 particles.add(p);
             }
 
