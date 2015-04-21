@@ -15,7 +15,7 @@ import java.util.Random;
 
 import javax.swing.JFrame;
 
-public class Window extends JFrame {
+public class ParticleWindow extends JFrame {
 
     private ArrayList<Particle> particles = new ArrayList<Particle>(500);
 
@@ -29,12 +29,12 @@ public class Window extends JFrame {
     private boolean running = true; // should we update?
 
     public static void main(String[] args) {
-        Window window = new Window(450, 280, "Particles: ");
-        window.pollInput();
-        window.loop();
+        ParticleWindow particleWindow = new ParticleWindow(450, 280, "Particles: ");
+        particleWindow.pollInput();
+        particleWindow.loop();
     }
 
-    public Window(int width, int height, String title) {
+    public ParticleWindow(int width, int height, String title) {
         super();
         setTitle(title);
         setIgnoreRepaint(true);
